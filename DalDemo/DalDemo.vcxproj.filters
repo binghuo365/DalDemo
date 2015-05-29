@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="DAFrame\DAOBASE\daobase.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\daoquerydef.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\datetime.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\exception.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\sqlexception.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\typetransform.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\connection.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\statement.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\transaction.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="DAO">
+      <UniqueIdentifier>{aef8a72f-61c4-4cf9-86c6-b59a02b3c1fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAO\BASE">
+      <UniqueIdentifier>{6e447881-da21-4e46-99d8-60d78b1287e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAO\IMPL">
+      <UniqueIdentifier>{da512bfe-d680-4291-bd5d-7484ee599005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAO\IMPL\BASE">
+      <UniqueIdentifier>{80b4f982-bb92-4905-9fb7-fb81bcd13d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAFrame">
+      <UniqueIdentifier>{5558f62d-aaca-4b59-a84a-f09f1b3e7003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAFrame\MYSQLIMPL">
+      <UniqueIdentifier>{59905428-5aab-4542-a583-5eb7caad1014}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAFrame\DAOBASE">
+      <UniqueIdentifier>{91eb2038-78db-42d5-8229-3ed1b79d140c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DAFrame\DAOBASE\daobase.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\daoquerydef.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\publicdef.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\datetime.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\exception.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\sqlexception.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\typetransform.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\connection.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\connectionimpl.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\resultset.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\statement.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\transaction.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\callablestatement.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
