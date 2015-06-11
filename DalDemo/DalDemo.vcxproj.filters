@@ -26,9 +26,6 @@
     <ClCompile Include="DAFrame\DAOBASE\statement.cpp">
       <Filter>DAFrame\DAOBASE</Filter>
     </ClCompile>
-    <ClCompile Include="DAFrame\DAOBASE\transaction.cpp">
-      <Filter>DAFrame\DAOBASE</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DAO">
@@ -91,6 +88,9 @@
       <Filter>DAFrame\DAOBASE</Filter>
     </ClInclude>
     <ClInclude Include="DAFrame\DAOBASE\callablestatement.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\poolconnectionautoptr.h">
       <Filter>DAFrame\DAOBASE</Filter>
     </ClInclude>
   </ItemGroup>

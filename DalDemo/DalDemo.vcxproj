@@ -83,7 +83,6 @@
     <ClCompile Include="DAFrame\DAOBASE\exception.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\sqlexception.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\statement.cpp" />
-    <ClCompile Include="DAFrame\DAOBASE\transaction.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\typetransform.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -95,6 +94,7 @@
     <ClInclude Include="DAFrame\DAOBASE\daoquerydef.h" />
     <ClInclude Include="DAFrame\DAOBASE\datetime.h" />
     <ClInclude Include="DAFrame\DAOBASE\exception.h" />
+    <ClInclude Include="DAFrame\DAOBASE\poolconnectionautoptr.h" />
     <ClInclude Include="DAFrame\DAOBASE\publicdef.h" />
     <ClInclude Include="DAFrame\DAOBASE\resultset.h" />
     <ClInclude Include="DAFrame\DAOBASE\sqlexception.h" />
