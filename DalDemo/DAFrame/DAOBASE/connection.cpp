@@ -1,8 +1,8 @@
 #include "connection.h"
+#include "connectionimpl.h"
+#include "callablestatement.h"
 
-using namespace DAFrame;
-
-CConnection::~CConnection()
+DAFrame::CConnection::~CConnection()
 {
 	delete _connImpl;
 	_connImpl = NULL;
@@ -11,24 +11,24 @@ CConnection::~CConnection()
 	_transaction = NULL;
 }
 
-CConnection::CConnection()
+DAFrame::CConnection::CConnection()
 	:_connImpl(NULL)
 {
 }
 
-CConnection::CConnection(CConnectionImpl * connImpl)
+DAFrame::CConnection::CConnection(CConnectionImpl * connImpl)
 {
 	_connImpl = connImpl;
 }
 
-std::auto_ptr< CStatement > CConnection::createStatement()
+std::auto_ptr< DAFrame::CStatement > DAFrame::CConnection::createStatement()
 {
 	std::auto_ptr< CStatement > stmt = _connImpl->createStatement();
 	stmt->setConnection( this );
 	return stmt;
 }
 
-std::auto_ptr< CStatement > CConnection::prepareStatement(const char* sql)
+std::auto_ptr< DAFrame::CStatement > DAFrame::CConnection::prepareStatement(const char* sql)
 {
 	std::auto_ptr< CStatement > stmt = _connImpl->prepareStatement( sql );
 	stmt->setConnection( this );
@@ -36,18 +36,18 @@ std::auto_ptr< CStatement > CConnection::prepareStatement(const char* sql)
 }
 
  
-void CConnection::setAutoCommit(bool autoCommit)
+void DAFrame::CConnection::setAutoCommit(bool autoCommit)
 {
 	_connImpl->setAutoCommit( autoCommit );
 }
 
 
-bool CConnection::getAutoCommit()
+bool DAFrame::CConnection::getAutoCommit()
 {
 	return _connImpl->getAutoCommit();
 }
 
-bool CConnection::begin(bool cashed)
+bool DAFrame::CConnection::begin(bool cashed)
 {
 	bool b = _connImpl->begin();
 	if( b && cashed )
@@ -58,7 +58,7 @@ bool CConnection::begin(bool cashed)
 }
 
 
-bool CConnection::commit(bool cashed)
+bool DAFrame::CConnection::commit(bool cashed)
 {
 	bool b = _connImpl->commit();
 	if( cashed && _transaction->isBegin() )
@@ -69,7 +69,7 @@ bool CConnection::commit(bool cashed)
 }
 
 
-bool CConnection::rollback(bool cashed)
+bool DAFrame::CConnection::rollback(bool cashed)
 {
 	bool b = _connImpl->rollback();
 	if( cashed && _transaction->isBegin() )
@@ -79,63 +79,63 @@ bool CConnection::rollback(bool cashed)
 	return b;
 }
 
-bool CConnection::connect()
+bool DAFrame::CConnection::connect()
 {
 	return _connImpl->connect();
 }
-bool CConnection::reconnect()
+bool DAFrame::CConnection::reconnect()
 {
 	return _connImpl->reconnect();
 }
-void CConnection::close()
+void DAFrame::CConnection::close()
 {
 	_connImpl->close();
 }
 
  
-bool CConnection::isClosed()
+bool DAFrame::CConnection::isClosed()
 {
 	return _connImpl->isClosed();
 }
     
-std::auto_ptr< CCallableStatement > CConnection::prepareCall( const char* sql )
+std::auto_ptr< DAFrame::CCallableStatement > DAFrame::CConnection::prepareCall(const char* sql)
 {
 	return _connImpl->prepareCall( sql );
 }
   
-void CConnection::setTransactionIsolation( int level )
+void DAFrame::CConnection::setTransactionIsolation(int level)
 {
 	_connImpl->setTransactionIsolation( level );
 }
 
-bool CConnection::keepActive()
+bool DAFrame::CConnection::keepActive()
 {
 	return _connImpl->keepActive();
 }
 
-std::auto_ptr<CConnection> CConnection::clone()
+std::auto_ptr<DAFrame::CConnection> DAFrame::CConnection::clone()
 {
-	CConnection *conn = new CConnection( _connImpl->clone() );
-	std::auto_ptr<CConnection> autoConn(conn);
+	DAFrame::CConnection *conn = new DAFrame::CConnection(_connImpl->clone());
+	std::auto_ptr<DAFrame::CConnection> autoConn(conn);
 	return autoConn;
 }
 
-bool CConnection::setEncoding( const char * encode )
+bool DAFrame::CConnection::setEncoding(const char * encode)
 {
 	return _connImpl->setEncoding( encode );
 }
 
-int CConnection::getErrNo() const
+int DAFrame::CConnection::getErrNo() const
 {
 	return _connImpl->getErrNo();
 }
 
-const char * CConnection::getError() const
+const char * DAFrame::CConnection::getError() const
 {
 	return _connImpl->getError();
 }
 
-cdf::CTransaction* CConnection::getTransaction()
+DAFrame::CTransaction* DAFrame::CConnection::getTransaction()
 {
 	return _transaction;
 }
@@ -143,14 +143,14 @@ cdf::CTransaction* CConnection::getTransaction()
 /**
 * 设置连接
 */
-void CConnection::setConnctionImpl( CConnectionImpl *pConnImpl )
+void DAFrame::CConnection::setConnctionImpl(CConnectionImpl *pConnImpl)
 {
 	_connImpl = pConnImpl;
 }
 /**
 * 得到连接
 */
-CConnectionImpl* CConnection::getConnctionImpl()
+DAFrame::CConnectionImpl* DAFrame::CConnection::getConnctionImpl()
 {
 	return _connImpl;
 }

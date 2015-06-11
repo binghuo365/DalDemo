@@ -3,6 +3,7 @@
 
 #include "daoquerydef.h"
 #include "publicdef.h"
+#include "statement.h"
 
 namespace DAFrame
 {
@@ -29,19 +30,19 @@ namespace DAFrame
 			void writeStmt( 
 				int startIndex ,
 				const SeqCmpNode& seqCmpNode , 
-				CStatement* stmt 
+				DAFrame::CStatement* stmt
 				);
 
 			void writeStmt( 
 				int index ,
 				const SDataNode& dateNode , 
-				CStatement* stmt 
+				DAFrame::CStatement* stmt
 				);
 
 			void writeStmt( 
 				int startIndex ,
 				const SeqDataNode& seqDataNode , 
-				CStatement* stmt 
+				DAFrame::CStatement* stmt
 				);
 
 			ulong64_t executeSql(
@@ -50,7 +51,7 @@ namespace DAFrame
 
 			ulong64_t executeSql(
 				const std::string& sql ,
-				CStatement* stmt
+				DAFrame::CStatement* stmt
 				);
 		};
 	}

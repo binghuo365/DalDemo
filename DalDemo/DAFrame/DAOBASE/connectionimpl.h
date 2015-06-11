@@ -1,6 +1,8 @@
 #ifndef _DBF_CONNECTION_IMPL_H_
 #define _DBF_CONNECTION_IMPL_H_
+
 #include "statement.h"
+
 namespace DAFrame
 {
 	class CStatement;

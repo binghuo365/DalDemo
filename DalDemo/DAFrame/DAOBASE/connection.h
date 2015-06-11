@@ -60,12 +60,12 @@ namespace DAFrame
 		
 		virtual const char * getError() const;
 
-		cdf::CTransaction* getTransaction();
+		DAFrame::CTransaction* getTransaction();
 		
 	protected:
-		CConnectionImpl *_connImpl;
+		DAFrame::CConnectionImpl *_connImpl;
 
-		cdf::CTransaction* _transaction;
+		DAFrame::CTransaction* _transaction;
 	};
 }
 

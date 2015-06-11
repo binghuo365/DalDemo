@@ -1,5 +1,6 @@
 #include "daobase.h"
 #include "typetransform.h"
+#include "statement.h"
 
 using namespace DAFrame;
 using namespace DAO;
@@ -155,7 +156,7 @@ std::string CDaoBase::makeOrder(
 void CDaoBase::writeStmt(
 	int index,
 	const SDataNode& dataNode,
-	CStatement* stmt
+	DAFrame::CStatement* stmt
 	)
 {
 	switch (dataNode.getDataType())
@@ -181,7 +182,7 @@ void CDaoBase::writeStmt(
 void CDaoBase::writeStmt(
 	int startIndex,
 	const SeqCmpNode& seqCmpNode,
-	CStatement* stmt
+	DAFrame::CStatement* stmt
 	)
 {
 	for (SeqCmpNode::const_iterator iter = seqCmpNode.begin(); iter != seqCmpNode.end(); iter++)
@@ -202,7 +203,7 @@ void CDaoBase::writeStmt(
 void CDaoBase::writeStmt(
 	int startIndex,
 	const SeqDataNode& seqDataNode,
-	CStatement* stmt
+	DAFrame::CStatement* stmt
 	)
 {
 	for (SeqDataNode::const_iterator iter = seqDataNode.begin(); iter != seqDataNode.end(); iter++)
@@ -212,19 +213,14 @@ void CDaoBase::writeStmt(
 	}
 }
 
-long64_t CDaoBase::executeSql(
-	const std::string& sql
-	)
+ulong64_t DAFrame::DAO::CDaoBase::executeSql(const std::string& sql)
 {
-	DAO::CPoolConnAutoPtr<CPoolConnection> conn = CPoolConnectionManager::getConnection();
-	std::auto_ptr<CStatement> stmt = conn->createStatement();
-	return executeSql(sql, stmt.get());
+	//DAO::CPoolConnAutoPtr<CPoolConnection> conn = CPoolConnectionManager::getConnection();
+	//std::auto_ptr<DAFrame::CStatement> stmt = conn->createStatement();
+	return 0;
 }
 
-long64_t CDaoBase::executeSql(
-	const std::string& sql,
-	CStatement* stmt
-	)
+ulong64_t DAFrame::DAO::CDaoBase::executeSql(const std::string& sql, DAFrame::CStatement* stmt)
 {
 	return stmt->executeUpdate(sql.c_str());
 }

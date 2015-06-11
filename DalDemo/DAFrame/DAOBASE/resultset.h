@@ -1,9 +1,10 @@
-#ifndef _CDF_RESULTSET_H_
-#define _CDF_RESULTSET_H_
+#ifndef _DAF_RESULTSET_H_
+#define _DAF_RESULTSET_H_
 
-#include "framework/cdf_common.h"
-#include "framework/util/datetime.h"
-namespace cdf
+#include "datetime.h"
+#include "publicdef.h"
+
+namespace DAFrame
 {
 class CResultSet
 {

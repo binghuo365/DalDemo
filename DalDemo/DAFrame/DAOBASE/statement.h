@@ -1,8 +1,8 @@
 #ifndef _DAF_STATEMENT_H_
 #define _DAF_STATEMENT_H_
+
 #include <memory>
 #include "datetime.h"
-#include "connection.h"
 
 namespace DAFrame
 {

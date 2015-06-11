@@ -2,17 +2,17 @@
 
 using namespace DAFrame;
 
-CStatement::CStatement()
-:_conn(NULL)
+DAFrame::CStatement::CStatement() : _conn(NULL)
 {
+
 }
 
-void CStatement::setConnection(CConnection* conn)
+void DAFrame::CStatement::setConnection(CConnection* conn)
 {
 	_conn = conn;
 }
 
-CConnection* CStatement::getConnection()
+DAFrame::CConnection* DAFrame::CStatement::getConnection()
 {
 	return _conn;
 }
