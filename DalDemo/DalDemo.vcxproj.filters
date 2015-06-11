@@ -26,6 +26,18 @@
     <ClCompile Include="DAFrame\DAOBASE\statement.cpp">
       <Filter>DAFrame\DAOBASE</Filter>
     </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\connectionmanager.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\connectionpool.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\poolconnection.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\DAOBASE\poolconnectionmanager.cpp">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DAO">
@@ -90,7 +102,19 @@
     <ClInclude Include="DAFrame\DAOBASE\callablestatement.h">
       <Filter>DAFrame\DAOBASE</Filter>
     </ClInclude>
-    <ClInclude Include="DAFrame\DAOBASE\poolconnectionautoptr.h">
+    <ClInclude Include="DAFrame\DAOBASE\connectionmanager.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\connectionpool.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\poolconnection.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\poolconnectionmanager.h">
+      <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\DAOBASE\poolconnautoptr.h">
       <Filter>DAFrame\DAOBASE</Filter>
     </ClInclude>
   </ItemGroup>

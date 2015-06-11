@@ -77,10 +77,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DAFrame\DAOBASE\connection.cpp" />
+    <ClCompile Include="DAFrame\DAOBASE\connectionmanager.cpp" />
+    <ClCompile Include="DAFrame\DAOBASE\connectionpool.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\daobase.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\daoquerydef.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\datetime.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\exception.cpp" />
+    <ClCompile Include="DAFrame\DAOBASE\poolconnection.cpp" />
+    <ClCompile Include="DAFrame\DAOBASE\poolconnectionmanager.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\sqlexception.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\statement.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\typetransform.cpp" />
@@ -90,11 +94,15 @@
     <ClInclude Include="DAFrame\DAOBASE\callablestatement.h" />
     <ClInclude Include="DAFrame\DAOBASE\connection.h" />
     <ClInclude Include="DAFrame\DAOBASE\connectionimpl.h" />
+    <ClInclude Include="DAFrame\DAOBASE\connectionmanager.h" />
+    <ClInclude Include="DAFrame\DAOBASE\connectionpool.h" />
     <ClInclude Include="DAFrame\DAOBASE\daobase.h" />
     <ClInclude Include="DAFrame\DAOBASE\daoquerydef.h" />
     <ClInclude Include="DAFrame\DAOBASE\datetime.h" />
     <ClInclude Include="DAFrame\DAOBASE\exception.h" />
-    <ClInclude Include="DAFrame\DAOBASE\poolconnectionautoptr.h" />
+    <ClInclude Include="DAFrame\DAOBASE\poolconnautoptr.h" />
+    <ClInclude Include="DAFrame\DAOBASE\poolconnection.h" />
+    <ClInclude Include="DAFrame\DAOBASE\poolconnectionmanager.h" />
     <ClInclude Include="DAFrame\DAOBASE\publicdef.h" />
     <ClInclude Include="DAFrame\DAOBASE\resultset.h" />
     <ClInclude Include="DAFrame\DAOBASE\sqlexception.h" />
