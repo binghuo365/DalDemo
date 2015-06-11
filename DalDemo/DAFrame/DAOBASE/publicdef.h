@@ -65,6 +65,7 @@ namespace DAFrame
 #define CDF_BINARY_CMP ""
 #endif
 
+#define DAF_USED_MYSQL
 }
 
 
