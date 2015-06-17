@@ -41,6 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>.\DAFrame\MYSQLIMPL\mysql-include\include\;.\DAFrame\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -52,10 +53,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -88,6 +92,11 @@
     <ClCompile Include="DAFrame\DAOBASE\sqlexception.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\statement.cpp" />
     <ClCompile Include="DAFrame\DAOBASE\typetransform.cpp" />
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlconnection.cpp" />
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlmetadata.cpp" />
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlpublic.cpp" />
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlresultset.cpp" />
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlstatement.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +118,11 @@
     <ClInclude Include="DAFrame\DAOBASE\statement.h" />
     <ClInclude Include="DAFrame\DAOBASE\transaction.h" />
     <ClInclude Include="DAFrame\DAOBASE\typetransform.h" />
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlconnection.h" />
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlmetadata.h" />
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlpublic.h" />
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlresultset.h" />
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlstatement.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -38,20 +38,23 @@
     <ClCompile Include="DAFrame\DAOBASE\poolconnectionmanager.cpp">
       <Filter>DAFrame\DAOBASE</Filter>
     </ClCompile>
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlconnection.cpp">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlmetadata.cpp">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlpublic.cpp">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlresultset.cpp">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClCompile>
+    <ClCompile Include="DAFrame\MYSQLIMPL\mysqlstatement.cpp">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="DAO">
-      <UniqueIdentifier>{aef8a72f-61c4-4cf9-86c6-b59a02b3c1fb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DAO\BASE">
-      <UniqueIdentifier>{6e447881-da21-4e46-99d8-60d78b1287e8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DAO\IMPL">
-      <UniqueIdentifier>{da512bfe-d680-4291-bd5d-7484ee599005}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DAO\IMPL\BASE">
-      <UniqueIdentifier>{80b4f982-bb92-4905-9fb7-fb81bcd13d14}</UniqueIdentifier>
-    </Filter>
     <Filter Include="DAFrame">
       <UniqueIdentifier>{5558f62d-aaca-4b59-a84a-f09f1b3e7003}</UniqueIdentifier>
     </Filter>
@@ -116,6 +119,21 @@
     </ClInclude>
     <ClInclude Include="DAFrame\DAOBASE\poolconnautoptr.h">
       <Filter>DAFrame\DAOBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlconnection.h">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlmetadata.h">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlpublic.h">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlresultset.h">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAFrame\MYSQLIMPL\mysqlstatement.h">
+      <Filter>DAFrame\MYSQLIMPL</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
