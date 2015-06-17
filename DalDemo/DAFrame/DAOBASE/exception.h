@@ -31,12 +31,8 @@ namespace DAFrame
 		ExceptionCodeReadOnly = 10012           //exception xml
 	};
 
-#ifndef DAF_WIN32
-	class CException
-#else
 	class CException
 		:public std::exception
-#endif
 	{
 	public :
 
