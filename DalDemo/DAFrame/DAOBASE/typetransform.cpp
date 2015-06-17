@@ -40,7 +40,7 @@ CTypeTransform::CTypeTransform(bool v)
 }
 CTypeTransform::CTypeTransform(long64_t v)
 {
-#ifdef CDE_WIN32
+#ifdef DAF_WIN32
 	sprintf(this->buf,"%I64d",v);
 #else
 	sprintf(this->buf,"%lld",v);

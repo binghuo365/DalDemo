@@ -5,6 +5,7 @@
 #include <string>
 #include <exception>
 #include "publicdef.h"
+#include <windows.h>
 
 namespace DAFrame
 {

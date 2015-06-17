@@ -229,7 +229,7 @@ CDateTime::CDateTime()
 
 void CDateTime::update()
 {
-#ifdef CDE_WIN32
+#ifdef DAF_WIN32
 	SYSTEMTIME time;
 	GetLocalTime( &time );
 	init( time.wYear , time.wMonth , time.wDay

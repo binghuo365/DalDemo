@@ -8,6 +8,7 @@ class CStatement;
 
 typedef unsigned __int64 ulong64_t;
 typedef long long  long64_t;
+typedef unsigned long ulong_t;
 
 namespace DAFrame
 {
@@ -66,6 +67,7 @@ namespace DAFrame
 #endif
 
 #define DAF_USED_MYSQL
+#define  DAF_WIN32
 }
 
 
