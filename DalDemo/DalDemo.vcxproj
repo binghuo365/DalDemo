@@ -97,6 +97,11 @@
     <ClCompile Include="DAFrame\MYSQLIMPL\mysqlpublic.cpp" />
     <ClCompile Include="DAFrame\MYSQLIMPL\mysqlresultset.cpp" />
     <ClCompile Include="DAFrame\MYSQLIMPL\mysqlstatement.cpp" />
+    <ClCompile Include="DAO\ActiveDao.cpp" />
+    <ClCompile Include="DAO\BASE\ActiveDaoBase.cpp" />
+    <ClCompile Include="DAO\IMPL\ActiveDaoImpl.cpp" />
+    <ClCompile Include="DAO\IMPL\BASE\ActiveDaoImplBase.cpp" />
+    <ClCompile Include="DAO\TActive.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +128,11 @@
     <ClInclude Include="DAFrame\MYSQLIMPL\mysqlpublic.h" />
     <ClInclude Include="DAFrame\MYSQLIMPL\mysqlresultset.h" />
     <ClInclude Include="DAFrame\MYSQLIMPL\mysqlstatement.h" />
+    <ClInclude Include="DAO\ActiveDao.h" />
+    <ClInclude Include="DAO\BASE\ActiveDaoBase.h" />
+    <ClInclude Include="DAO\IMPL\ActiveDaoImpl.h" />
+    <ClInclude Include="DAO\IMPL\BASE\ActiveDaoImplBase.h" />
+    <ClInclude Include="DAO\TActive.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

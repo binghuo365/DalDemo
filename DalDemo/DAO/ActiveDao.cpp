@@ -1,7 +1,7 @@
-#include "Dao/ActiveDao.h"
-Dao::IActiveDao::IActiveDao()
+#include "ActiveDao.h"
+DAO::IActiveDao::IActiveDao()
 {
 }
-Dao::IActiveDao::~IActiveDao()
+DAO::IActiveDao::~IActiveDao()
 {
 }

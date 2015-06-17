@@ -53,6 +53,21 @@
     <ClCompile Include="DAFrame\MYSQLIMPL\mysqlstatement.cpp">
       <Filter>DAFrame\MYSQLIMPL</Filter>
     </ClCompile>
+    <ClCompile Include="DAO\ActiveDao.cpp">
+      <Filter>DAO</Filter>
+    </ClCompile>
+    <ClCompile Include="DAO\TActive.cpp">
+      <Filter>DAO</Filter>
+    </ClCompile>
+    <ClCompile Include="DAO\BASE\ActiveDaoBase.cpp">
+      <Filter>DAO\BASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAO\IMPL\BASE\ActiveDaoImplBase.cpp">
+      <Filter>DAO\IMPL\BASE</Filter>
+    </ClCompile>
+    <ClCompile Include="DAO\IMPL\ActiveDaoImpl.cpp">
+      <Filter>DAO\IMPL</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="DAFrame">
@@ -63,6 +78,18 @@
     </Filter>
     <Filter Include="DAFrame\DAOBASE">
       <UniqueIdentifier>{91eb2038-78db-42d5-8229-3ed1b79d140c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAO">
+      <UniqueIdentifier>{ff7d22f3-14b9-4db7-8713-e710f0a2e58c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAO\BASE">
+      <UniqueIdentifier>{d5ac9eb5-8d44-4ace-bd97-e02ea8c65bb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAO\IMPL">
+      <UniqueIdentifier>{07b9126a-bfcf-4530-a69c-29d8a33421fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAO\IMPL\BASE">
+      <UniqueIdentifier>{f4694c93-a6cb-434a-b9f5-89cd9c923e89}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +161,21 @@
     </ClInclude>
     <ClInclude Include="DAFrame\MYSQLIMPL\mysqlstatement.h">
       <Filter>DAFrame\MYSQLIMPL</Filter>
+    </ClInclude>
+    <ClInclude Include="DAO\ActiveDao.h">
+      <Filter>DAO</Filter>
+    </ClInclude>
+    <ClInclude Include="DAO\TActive.h">
+      <Filter>DAO</Filter>
+    </ClInclude>
+    <ClInclude Include="DAO\BASE\ActiveDaoBase.h">
+      <Filter>DAO\BASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAO\IMPL\BASE\ActiveDaoImplBase.h">
+      <Filter>DAO\IMPL\BASE</Filter>
+    </ClInclude>
+    <ClInclude Include="DAO\IMPL\ActiveDaoImpl.h">
+      <Filter>DAO\IMPL</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,9 +1,9 @@
 #ifndef _ACTIVE_DAO_IMPL_H_
 #define _ACTIVE_DAO_IMPL_H_
-#include "Dao/Impl/Base/ActiveDaoImplBase.h"
-namespace Dao
+#include "BASE/ActiveDaoImplBase.h"
+namespace DAO
 {
-    namespace Impl
+    namespace IMPL
     {
         class CActiveDaoImpl
                 :public CActiveDaoImplBase
@@ -12,7 +12,7 @@ namespace Dao
             CActiveDaoImpl();
             virtual ~CActiveDaoImpl();
 
-			virtual void load(Message::DB::Tables::SeqTActive& tActives);
+			virtual void load(DAO::Tables::SeqTActive& tActives);
         };
     }
 }
