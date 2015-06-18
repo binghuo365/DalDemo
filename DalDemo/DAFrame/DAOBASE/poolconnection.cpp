@@ -10,7 +10,7 @@ CPoolConnection::CPoolConnection(
 								DAFrame::CConnectionImpl * connImpl,
 								 CConnectionPool* connectionPool
 								 )
-:CConnection(connImpl),_connectionPool(connectionPool),_isIdle(true),_cached(true)
+:CConnection(connImpl),_connectionPool(connectionPool),_isIdle(true)
 {
 }
 
@@ -19,18 +19,6 @@ void CPoolConnection::putConnection()
 	if (!this->_isIdle)
 	{
 		_connImpl->rollback();
-		if( getTransaction()->isBegin() )
-		{
-			getTransaction()->rollback();
-		}
-		else
-		{
-			if( _cached )
-			{
-				getTransaction()->commit();
-			}
-		}
-		_cached = true;
 		this->_connectionPool->putConnection(this);	
 	}	
 }

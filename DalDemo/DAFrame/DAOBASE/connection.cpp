@@ -6,9 +6,6 @@ DAFrame::CConnection::~CConnection()
 {
 	delete _connImpl;
 	_connImpl = NULL;
-	
-	delete _transaction;
-	_transaction = NULL;
 }
 
 DAFrame::CConnection::CConnection()
@@ -49,34 +46,19 @@ bool DAFrame::CConnection::getAutoCommit()
 
 bool DAFrame::CConnection::begin(bool cashed)
 {
-	bool b = _connImpl->begin();
-	if( b && cashed )
-	{
-		_transaction->begin();
-	}
-	return b;
+	return _connImpl->begin();
 }
 
 
 bool DAFrame::CConnection::commit(bool cashed)
 {
-	bool b = _connImpl->commit();
-	if( cashed && _transaction->isBegin() )
-	{
-		return _transaction->commit();
-	}
-	return b;
+	return 	_connImpl->commit();
 }
 
 
 bool DAFrame::CConnection::rollback(bool cashed)
 {
-	bool b = _connImpl->rollback();
-	if( cashed && _transaction->isBegin() )
-	{
-		return _transaction->rollback();
-	}
-	return b;
+	return  _connImpl->rollback();
 }
 
 bool DAFrame::CConnection::connect()
@@ -133,11 +115,6 @@ int DAFrame::CConnection::getErrNo() const
 const char * DAFrame::CConnection::getError() const
 {
 	return _connImpl->getError();
-}
-
-DAFrame::CTransaction* DAFrame::CConnection::getTransaction()
-{
-	return _transaction;
 }
 
 /**

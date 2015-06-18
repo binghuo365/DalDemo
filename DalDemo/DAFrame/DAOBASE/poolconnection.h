@@ -32,14 +32,6 @@ namespace DAFrame
 		
 		void putConnection();
 
-		void setCached( bool cached )
-		{
-			_cached = cached;
-		}
-		bool isCached() const
-		{
-			return _cached;
-		}
 	protected:
 		friend class ::DAFrame::CConnectionPool;
 		CPoolConnection( 
@@ -50,8 +42,6 @@ namespace DAFrame
 		CConnectionPool* _connectionPool;
 		
 		bool _isIdle;
-
-		bool _cached;
 	};
 }
 

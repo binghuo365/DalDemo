@@ -59,13 +59,9 @@ namespace DAFrame
 		virtual int getErrNo() const;
 		
 		virtual const char * getError() const;
-
-		DAFrame::CTransaction* getTransaction();
 		
 	protected:
 		DAFrame::CConnectionImpl *_connImpl;
-
-		DAFrame::CTransaction* _transaction;
 	};
 }
 
